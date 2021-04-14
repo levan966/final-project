@@ -1,0 +1,25 @@
+<div class="form-div">
+    <form>
+        <div class="img">
+            <img class="mb-4" src="https://image.flaticon.com/icons/png/512/1883/1883171.png" alt="" width="120"
+                height="120">
+        </div>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="">
+            <input type="email" placeholder="name@example.com" name="email">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="">
+            <input type="password" placeholder="Password" name="password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="signIn()">Sign in</button>
+        <br><br>
+    </form>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="fbAuth() ">facebook</button>
+    <br><br>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="googleAuth()">google</button>
+
+</div>

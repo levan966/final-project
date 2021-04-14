@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>hotels</h1>
+    <div class="hotels">
+        <div class="hotel" *ngFor="let hotel of hotelData">
+            <div class="single-hotel">
+                <div class="single-hotel-img">
+                    <img src="{{hotel.url}}" />
+
+                    <div class="single-hotel-img-hover">
+                        <a [routerLink]="'/singleHotel/' + hotel.key">more</a>
+                    </div>
+                </div>
+                <div class="single-hotel-info">
+                    <h2><a [routerLink]="'/singleHotel/' + hotel.key">{{hotel.name}}</a>
+                        <span>
+                            <i class="fa fa-star"></i>
+                            {{hotel.star}}
+                        </span>
+                    </h2>
+                    <h3>{{hotel.sity}} </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

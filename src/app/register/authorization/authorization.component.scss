@@ -1,0 +1,27 @@
+.form-div{
+    margin-top: 5em;
+    form{
+        border: 0.5px solid black;
+        padding: 30px;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 3%;
+        .img{
+            width: 100%;
+            margin: 0 auto;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+        }
+        div{
+            label{
+                font-weight: 100;
+            }
+        }
+    }
+}

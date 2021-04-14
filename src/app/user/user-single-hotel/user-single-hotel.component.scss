@@ -1,0 +1,74 @@
+@import '../../../scss/functions';
+@import '../../../scss/variables';
+
+
+.single-hotel{
+  font-size: 16px;
+  margin-top: pxtoem(50,16);
+  // padding:  pxtoem(20,16), pxtoem(20,16);
+  font-size: 16px;
+  width: 100%;
+  .single-hotel-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .hotel-left-side{
+      width: 60%;
+      img{
+        width: 100%;
+      }
+      .awesome{
+        margin-top: pxtoem(5,16);
+      }
+    }
+    .hotel-right-side{
+      padding-left: pxtoem(20,16);
+      h1{
+        text-transform: uppercase;
+        font-weight: 700;
+        // font-size: pxtoem(25,16);
+        font-family: $font_montserrat;
+        color: rgba(207, 32, 26, 0.897);
+        // font-family: $font_Roboto;
+      }
+      .star{
+        color: red;
+      }
+      border: 1px solid black;
+          .hotel-info{
+            margin-top: pxtoem(12,16);
+          div{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            h4{
+              font-family: $font_montserrat;
+              color: #2b2628;
+              display: inline-block;
+              margin: 0;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: pxtoem(18,16);
+            }
+            span{
+              font-size: pxtoem(17,16);
+              text-transform: capitalize;
+              padding-left: 7px;
+              color: rgb(43, 14, 14);
+              font-family: $font_Roboto;
+            }
+          }
+        }
+    }
+  }
+}
+
+.hotel-details{
+  width: 100%;
+  .awesome{
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+}

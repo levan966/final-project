@@ -1,0 +1,81 @@
+<section class="single-hotel">
+    <div class="single-hotel-wrapper">
+        <div class="hotel-left-side">
+            <img src="{{singleHotel.url}}">
+        </div>
+        <div class="hotel-right-side">
+            <h1 class="hotel-name">
+                {{singleHotel.name}}
+            </h1>
+            <div class="star">
+                <i class="fa fa-star fa-2x"></i>
+                <span class="star-number"> {{singleHotel.star}} </span>
+            </div>
+            <div class="hotel-info">
+                <div class="region">
+                    <h4>region &nbsp;:</h4>
+                    <span class="region-info">
+                        {{singleHotel.region}}
+                    </span>
+                </div>
+                <div class="sity">
+                    <h4>sity &nbsp;:</h4>
+                    <span class="sity-info">
+                        {{singleHotel.sity}}
+                    </span>
+                </div>
+                <div class="address">
+                    <h4>address &nbsp;:</h4>
+                    <span class="address-info">
+                        {{singleHotel.address}}
+                    </span>
+                </div>
+            </div>
+            <div class="rooms">
+                <h4>free rooms &nbsp;:</h4>
+                <span>
+                    {{singleHotel.roomsNumber}}
+                </span>
+            </div>
+            <button>reserve</button>
+        </div>
+    </div>
+    <div class="hotels-additionally">
+        <div class="awesome">
+            <h2>additional services</h2>
+            <ul>
+                <li *ngIf="singleHotel.otherServices.restaurant">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> restaurant
+                </li>
+                <li *ngIf="singleHotel.otherServices.parking">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> garage
+                </li>
+                <li *ngIf="singleHotel.otherServices.wifi">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> wife
+                </li>
+                <li *ngIf="singleHotel.otherServices.tv">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> tv
+                </li>
+                <li *ngIf="singleHotel.otherServices.pool">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> pool
+                </li>
+                <li *ngIf="singleHotel.otherServices.sauna">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> sauna
+                </li>
+                <li *ngIf="singleHotel.otherServices.golf">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> golf
+                </li>
+                <li *ngIf="singleHotel.otherServices.tableTennis">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> tennis
+                </li>
+                <li *ngIf="singleHotel.otherServices.bowling">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i> bowling
+                </li>
+            </ul>
+        </div>
+        <div class="description">
+            <h2>description</h2>
+            {{singleHotel.description}}
+        </div>
+    </div>
+</section>

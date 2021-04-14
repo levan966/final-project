@@ -1,0 +1,172 @@
+@import '../../scss/functions';
+@import '../../scss/variables';
+
+
+.single-hotel{
+  font-size: 16px;
+  margin-top: pxtoem(50,16);
+  width: 100%;
+  .single-hotel-wrapper{
+    @media (max-width: 978px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .hotel-left-side{
+      @media (max-width: 978px){
+        width: 80%;
+        margin-top: pxtoem(20, 16);
+    }
+      width: 60%;
+      img{
+        width: 100%;
+      }
+      .awesome{
+        margin-top: pxtoem(5,16);
+      }
+    }
+    .hotel-right-side{
+      @media (max-width: 978px){
+        width: 80%;
+        justify-content: space-between;
+    }
+      width: 40%;
+      background-color: rgba(139, 227, 233, 0.151);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+        h1{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: $font_montserrat;
+        color: rgba(207, 32, 26, 0.767);
+      }
+      .star{
+        .fa{
+          color: rgb(230, 211, 49);
+        }
+        .star-number{
+          font-size: pxtoem(28, 16);
+          font-weight: 400;
+        }
+      }
+          .hotel-info{
+            margin-top: pxtoem(12,16);
+            div{
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              h4{
+                
+                font-family: $font_montserrat;
+                color: #2b2628;
+                display: inline-block;
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: pxtoem(18,16);
+            }
+            span{
+              font-size: pxtoem(17,16);
+              text-transform: capitalize;
+              padding-left: 7px;
+              color: rgb(43, 14, 14);
+              font-family: $font_Roboto;
+            }
+          }
+        }
+        .rooms{
+          display: flex;
+          align-items: center;
+            justify-content: flex-start;
+          margin-top: pxtoem(30,16);
+          h4{
+            font-family: $font_montserrat;
+              color: #2b2628;
+              display: inline-block;
+              margin: 0;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: pxtoem(18,16);
+          }
+          span{
+            font-size: pxtoem(17,16);
+              text-transform: capitalize;
+              padding-left: 7px;
+              color: rgb(43, 14, 14);
+              font-family: $font_Roboto;
+          }
+        }
+        button{
+          all: unset;
+          // margin-left: pxtoem(50,16);
+          margin-top: pxtoem(40,16);
+          border: 1px solid black;
+          background-color: rgba(0, 133, 241, 0.589);
+          padding: pxtoem(20,16) pxtoem(28,16);;
+          color: white;
+          &:hover{
+            cursor: pointer;
+            background-color: rgba(0, 112, 241, 0.664);
+          }
+          &:active{
+            background-color: rgba(0, 112, 241, 0.514);
+            
+          }
+        }
+    }
+  }
+  .hotels-additionally{
+    padding: pxtoem(20,16);
+    background-color: rgba(139, 227, 233, 0.151);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: pxtoem(8,16);
+    .awesome{
+      h2{
+        margin-top: pxtoem(20,16);
+        text-transform: uppercase;
+        font-family: $font_montserrat;
+        font-weight: 700;
+        text-align: center;
+      }
+      ul{
+        @media (max-width: 350px){
+          flex-direction: column;
+        }
+        padding: pxtoem(20,16);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        list-style-type:none;
+        li{
+          margin-top: pxtoem(20,16);
+          margin-left: pxtoem(20,16);
+          .fa{
+            color: rgb(50, 205, 89);
+            font-family: $font_montserrat;
+          }
+        }
+      }
+    }
+    .description{
+      @media (max-width: 478px){
+        width: 100%;
+    }
+      h2{
+        margin-top: pxtoem(20,16);
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+      }
+      font-family: $font_Roboto;
+    }
+  }
+}
+

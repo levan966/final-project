@@ -1,0 +1,27 @@
+<h2 class="">welcome</h2>
+<span class="welcome">
+    <span class="username">
+        {{user.displayName}}</span> &nbsp;
+    <span>Do You want to add a hotel? </span>
+    <button> add hotel </button>
+</span>
+
+<div class="container">
+    <h1>hotels</h1>
+    <div class="hotels">
+        <div class="hotel" *ngFor="let hotel of hotels">
+            <div class="single-hotel">
+                <div class="single-hotel-img">
+                    <img src="{{hotel.url}}" />
+                    <div class="single-hotel-img-hover">
+                        <a [routerLink]="'/userSingleHotel/' + hotel.key">more</a>
+                    </div>
+                </div>
+                <div class="single-hotel-info">
+                    <h2><a [routerLink]="'/userSingleHotel/' + hotel.key">{{hotel.name}}</a></h2>
+                    <h3>{{hotel.sity}} </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

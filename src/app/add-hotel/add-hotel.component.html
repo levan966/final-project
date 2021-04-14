@@ -1,0 +1,110 @@
+<form action="">
+    <h1>add your hotel's details</h1>
+    <div class="addhotel">
+        <div class="hotel-info">
+            <div class="hotel-info-details">
+                <h3>information</h3>
+                <div>
+                    <label for="name">name</label>
+                    <input type="text" [(ngModel)]="hotel.name" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="region">region</label>
+                    <input type="text" [(ngModel)]="hotel.region" name="region" id="region" required>
+                </div>
+                <div>
+                    <label for="sity">sity</label>
+                    <input type="text" [(ngModel)]="hotel.sity" name="sity" id="sity">
+                </div>
+                <div>
+                    <label for="address">address</label>
+                    <input type="text" [(ngModel)]="hotel.address" name="address" id="address">
+                </div>
+                <div>
+                    <label for="rooms">rooms</label>
+                    <input type="number" [(ngModel)]="hotel.roomsNumber" name="rooms" id="rooms">
+                </div>
+                <div>
+                    <label for="img">img</label>
+                    <input type="text" [(ngModel)]="hotel.url" name="img" id="img">
+                </div>
+            </div>
+            <div class="hotel-info-services">
+                <h3>other services</h3>
+                <div>
+                    <input type="checkbox" name="parking" id="parking"
+                        (change)="serviceTrue(hotel.otherServices.parking, $event.target.name)">
+                    <label for="parking">parking</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="restaurant" id="restaurant"
+                        (change)="serviceTrue(hotel.otherServices.restaurant, $event.target.name)">
+                    <label for="restaurant">restaurant</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="wifi" id="wifi"
+                        (change)="serviceTrue(hotel.otherServices.wifi, $event.target.name)">
+                    <label for="wifi">wifi </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="tv" id="tv"
+                        (change)="serviceTrue(hotel.otherServices.tv, $event.target.name)">
+                    <label for="tv">tv </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="pool" id="pool"
+                        (change)="serviceTrue(hotel.otherServices.pool, $event.target.name)">
+                    <label for="pool">pool</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sauna" id="sauna"
+                        (change)="serviceTrue(hotel.otherServices.sauna, $event.target.name)">
+                    <label for="sauna">sauna</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="golf" id="golf"
+                        (change)="serviceTrue(hotel.otherServices.golf, $event.target.name)">
+                    <label for="golf">golf</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="tableTennis" id="tableTennis"
+                        (change)="serviceTrue(hotel.otherServices.tableTennis, $event.target.name)">
+                    <label for="tableTennis">tableTennis</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="bowling" id="bowling"
+                        (change)="serviceTrue(hotel.otherServices.bowling, $event.target.name)">
+                    <label for="bowling">bowling</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="descr-btn">
+            <div class="description">
+                <label for="description">description</label>
+                <textarea name="description" id="description" cols="" rows="" placeholder="write hotel's description"
+                    [(ngModel)]="hotel.description"></textarea>
+            </div>
+            <div class="button">
+                <button class="submit" type="submit" (click)="addHotel()">add hotel</button>
+                <button class="reset" type="reset">reset</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<div>
+    <ul>
+        <li *ngFor="let hotel of hotels" (click)="removeHotel(hotel.key)">
+            {{hotel.name}} &nbsp;&nbsp;
+            {{hotel.region}}&nbsp;&nbsp;
+            {{hotel.sity}}&nbsp;&nbsp;
+            {{hotel.address}}&nbsp;&nbsp;
+            {{hotel.roomsNumber}}&nbsp;&nbsp;
+            {{hotel.url}}&nbsp;&nbsp;
+            {{hotel.description}}&nbsp;&nbsp;
+        </li>
+    </ul>
+</div>

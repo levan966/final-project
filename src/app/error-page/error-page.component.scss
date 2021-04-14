@@ -1,0 +1,11 @@
+@import './../../scss/functions';
+*{
+
+    padding: pxtoem(50,16);
+}
+h1{
+    font-size: pxtoem(30,16);
+    margin-bottom: pxtoem(150,16);
+    text-transform: uppercase;
+    font-weight: 500;
+}

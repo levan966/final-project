@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "finaltest-7e2e0": {
+      "hosting": {
+        "final-project": [
+          "finaltest-7e2e0"
+        ]
+      }
+    }
+  }
+}
